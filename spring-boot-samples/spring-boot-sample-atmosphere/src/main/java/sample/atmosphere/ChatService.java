@@ -45,7 +45,7 @@ public class ChatService {
 				(event.isCancelled() ? "cancelled" : "closed"));
 	}
 
-	@org.atmosphere.config.service.Message(encoders = JacksonEncoderDecoder.class, decoders = JacksonEncoderDecoder.class)
+	@org.atmosphere.config.service.Message(encoders =  JacksonEncoderDecoder.class, decoders = JacksonEncoderDecoder.class)
 	public Message onMessage(Message message) throws IOException {
 		this.logger.info("Author {} sent message {}", message.getAuthor(),
 				message.getMessage());
